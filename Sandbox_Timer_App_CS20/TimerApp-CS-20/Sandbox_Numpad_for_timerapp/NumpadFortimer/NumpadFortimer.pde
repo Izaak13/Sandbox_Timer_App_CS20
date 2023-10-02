@@ -6,7 +6,7 @@
 //CAUTION, decimals don't work in integers, not floats or doubles
 //
 void setup() {
-  size (400, 400);
+  size (400, 600);
   display();
   population();
   textSetup();
@@ -17,7 +17,7 @@ void setup() {
     stroke(#FF8F05);
     numPadRects();
     String one="1";
-    textDraw(purple, CENTER, CENTER, font, one, x[0], y[0], widthSquare, heightSquare);
+    textDraw(navy, CENTER, CENTER, font, one, x[0], y[0], widthSquare, heightSquare);
   } //End draw
   //
   void mousePressed() {
