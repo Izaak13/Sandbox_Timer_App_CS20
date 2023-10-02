@@ -16,7 +16,8 @@ void setup() {
     fill(#E36B1B);
     stroke(#FF8F05);
     numPadRects();
-    textDraw(purple, CENTER, CENTER, font, title, titleX, titleY, titleWidth, titleHeight);
+    String one="1";
+    textDraw(purple, CENTER, CENTER, font, one, x[0], y[0], widthSquare, heightSquare);
   } //End draw
   //
   void mousePressed() {

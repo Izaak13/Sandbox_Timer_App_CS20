@@ -1,5 +1,5 @@
 PFont font;
-color purple=#5402E5 , white=FFFFFF;//not night mode friendly
+color purple=#5402E5 , white=#FFFFFF;//not night mode friendly
 //
 void textSetup() {
   //Fonts from OS
@@ -24,10 +24,10 @@ void textSetup() {
 float textCalculator( float rectWidth, String text ) {
   float size = appWidth;
   textSize( size );
-  while ( textWidth( size ) >= rectWidth; ) {
+  while ( textWidth( text ) >= rectWidth ) {
   size = size * 0.99;
   textSize( size );
   }//End while
-  size >= rectWidth;
+  size = textWidth (text);
   return size;
 } //End Text Calculator
