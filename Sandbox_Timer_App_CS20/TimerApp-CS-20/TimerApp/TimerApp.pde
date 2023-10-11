@@ -27,13 +27,14 @@ void setup() {
 } //End Setup
 //
 void draw() {
-  if ( windowActivated == true ) splashScreen();
+  //if ( windowActivated == true ) splashScreen();
   //numpad draw
   fill(#E36B1B);
     stroke(#FF8F05);
     numPadRects();
     String one="1";
-    textDraw(navy, CENTER, CENTER, font, one, x[0], y[0], widthSquare, heightSquare);
+    fill(#D82323);
+  textDraw(navy, CENTER, CENTER, font, one, x[0], y[0], widthSquare, heightSquare);
     //
 } //End Draw
 //

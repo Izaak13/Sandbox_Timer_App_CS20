@@ -1,4 +1,3 @@
-
 //
 void display() {
   appWidth = width;

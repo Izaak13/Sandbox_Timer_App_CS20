@@ -30,11 +30,11 @@ void population() {
     // Writing X&Y rect ()variables
   for (int i=0; i<numPadColumns; i++ ) { //i stops for x, not y
     x[i] = border+widthSquare*(2*i+1)/2;
-    println("Inside x", x[i]);
+    //println("Inside x", x[i]);
   } //End For
   for (int i=0; i<numPadRows; i++) {
     y[i] = widthSquare*(2*i+5)/2;
-    println("Inside y", y[i]);
+    //println("Inside y", y[i]);
   }//End For
   //
   //if(i<numPadColumns)

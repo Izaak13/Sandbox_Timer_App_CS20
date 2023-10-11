@@ -6,7 +6,7 @@ void textSetup() {
   String[] fontList = PFont.list(); //To list all fonts available on system
   printArray(fontList); //For listing all possible fonts to choos, then createFont
   //
-  font = createFont ("Arial", 269); //Verify font exists
+  font = createFont ("Georgia", 169); //Verify font exists
   //Tools / Create Font / find font / do NOT PRESS "OK", known bug
   //
 }//End text setup
@@ -27,8 +27,10 @@ float textCalculator( float rectWidth, String text ) {
   while ( textWidth( text ) >= rectWidth ) {
   size = size * 0.99;
   textSize(size);
-  println("2. ", textWidth (text), rectWidth, size);
+  //println("2. ", textWidth (text), rectWidth, size);
   }//End while
+  textSize (size);
   size = textWidth (text);
+  textSize (size);
   return size;
 } //End Text Calculator

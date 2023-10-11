@@ -1,5 +1,5 @@
-void splashScreen() {
+/*void splashScreen() {
   //
   background(0); //grey scale, black
   //
-} //End Splashscreen
+} //End Splashscreen*/
