@@ -7,7 +7,7 @@ void textSetup() {
   printArray(fontList); //For listing all possible fonts to choos, then createFont
   //
   font = createFont ("Georgia", 169); //Verify font exists
-  //Tools / Create Font / find font / do NOT PRESS "OK", known bug
+  //Tools create Font / find font / DO NOT PRESS "OK", known bug
   //
 }//End text setup
 //

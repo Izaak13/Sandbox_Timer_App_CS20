@@ -5,12 +5,21 @@
 //Global Variables
 //CAUTION, decimals don't work in integers, not floats or doubles
 //
-//void setup() {
-//   } //End Setup
-  //void draw() {
-    //
+void numpadSetup() {
+      size (400, 600);
+  display();
+  population();
+  textSetup();
+  } //End Setup
+  void numpadDraw() {
+    fill(#E36B1B);
+    stroke(#FF8F05);
+    numPadRects();
+    String one="1";
+    fill(#D82323);
+  textDraw(navy, CENTER, CENTER, font, one, x[0], y[0], widthSquare, heightSquare);
     
-//  } //End draw
+  } //End draw
   //
   //void mousePressed() {
   

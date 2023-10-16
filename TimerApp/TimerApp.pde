@@ -1,9 +1,13 @@
 //Global Variables
 int appWidth, appHeight;
 Boolean windowActivated = false;
+Boolean numpad = false;
 //
 void setup() {
-  size(2000, 2000);
+  size(400, 600);
+  if (numpad=true) {
+    numpadSetup();
+  }
   //fullscreen(); //displayWidth, displayHeight
   //OPTION: Use display width and height instead.
   appWidth = width;
@@ -17,25 +21,16 @@ void setup() {
   println(appWidth, appHeight);
   //Note: arithmetic will be solved but nit the CANVAS size.
   //Solution:  requires different function, note size(), i.e. fullScreen()
-  //numpad fortimer
-    size (400, 600);
-  display();
-  population();
-  textSetup();
   //
   //
 } //End Setup
 //
 void draw() {
   //if ( windowActivated == true ) splashScreen();
-  //numpad draw
-  fill(#E36B1B);
-    stroke(#FF8F05);
-    numPadRects();
-    String one="1";
-    fill(#D82323);
-  textDraw(navy, CENTER, CENTER, font, one, x[0], y[0], widthSquare, heightSquare);
-    //
+  //
+  if (numpad=true) {
+    numpadDraw();
+  }
 } //End Draw
 //
 void mousePressed() {
