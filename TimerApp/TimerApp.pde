@@ -40,7 +40,6 @@ void mousePressed() {
   for(int i=0; i<numPadColumns; i++) {
       for(int j=0; j<numPadRows-2; j++) {
           if (mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[j] && mouseY<y[j]+widthSquare) println(j*3+i+1);
-          
       }// End for
     }//End for 
     if ( mouseX>x[0] && mouseX<x[0]+widthSquare && mouseY>y[3] && mouseY<y[3]+widthSquare) println("00");

@@ -11,14 +11,19 @@ void numpadSetup() {
   population();
   textSetup();
   } //End Setup
+  
+  //
   void numpadDraw() {
     fill(#E36B1B);
     stroke(#FF8F05);
     numPadRects();
-    String one="1";
+    String s1="1", s2="2";
     fill(#D82323);
-  textDraw(navy, CENTER, CENTER, font, one, x[0], y[0], widthSquare, heightSquare);
-    
+    for(int i=0; i<numPadColumns; i++) {
+      for(int j=0; j<numPadRows-2; j++) {
+        textDraw(navy, CENTER, CENTER, font, String j*3+i+1, x[0], y[0], widthSquare, heightSquare);
+      }
+    }
   } //End draw
   //
   //void mousePressed() {

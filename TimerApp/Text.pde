@@ -15,6 +15,7 @@ void textSetup() {
   fill( ink ); //Ink, hexadecimal
   textAlign ( alignX, alignY ); //Align X&Y
   float size = textCalculator( rectWidth, text );
+  println(size);
   textFont(font, size); //Change the number until it fits, largest font size
   text( text, rectX, rectY, rectWidth, rectHeight );
   fill ( white ); //Default
@@ -29,6 +30,7 @@ float textCalculator( float rectWidth, String text ) {
   textSize(size);
   //println("2. ", textWidth (text), rectWidth, size);
   }//End while
+  size *= 0.85;
   textSize (size);
   size = textWidth (text);
   textSize (size);
