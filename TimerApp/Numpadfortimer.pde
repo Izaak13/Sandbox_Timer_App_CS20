@@ -17,13 +17,21 @@ void numpadSetup() {
     fill(#E36B1B);
     stroke(#FF8F05);
     numPadRects();
-    String s1="1", s2="2";
+    String one="1", two="2", three="3", four="4", five="5", six="6", seven="7", eight="8", nine="9", zero="0";
+    String dzero="00", enter="ENTER";
     fill(#D82323);
-    for(int i=0; i<numPadColumns; i++) {
-      for(int j=0; j<numPadRows-2; j++) {
-        textDraw(navy, CENTER, CENTER, font, String j*3+i+1, x[0], y[0], widthSquare, heightSquare);
-      }
-    }
+    textDraw(navy, CENTER, CENTER, font, one, x[0], y[0], widthSquare, heightSquare);
+    textDraw(navy, CENTER, CENTER, font, two, x[1], y[0], widthSquare, heightSquare);
+    textDraw(navy, CENTER, CENTER, font, three, x[2], y[0], widthSquare, heightSquare);
+    textDraw(navy, CENTER, CENTER, font, four, x[0], y[1], widthSquare, heightSquare);
+    textDraw(navy, CENTER, CENTER, font, five, x[1], y[1], widthSquare, heightSquare);
+    textDraw(navy, CENTER, CENTER, font, six, x[2], y[1], widthSquare, heightSquare);
+    textDraw(navy, CENTER, CENTER, font, seven, x[0], y[2], widthSquare, heightSquare);
+    textDraw(navy, CENTER, CENTER, font, eight, x[1], y[2], widthSquare, heightSquare);
+    textDraw(navy, CENTER, CENTER, font, nine, x[2], y[2], widthSquare, heightSquare);
+    textDraw(navy, CENTER, CENTER, font, dzero, x[0], y[3], widthSquare, heightSquare);
+    textDraw(navy, CENTER, CENTER, font, zero, x[1], y[3], widthSquare, heightSquare);
+    textDraw(navy, CENTER, CENTER, font, enter, x[2], y[3], widthSquare, heightSquare);
   } //End draw
   //
   //void mousePressed() {

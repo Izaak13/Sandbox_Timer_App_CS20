@@ -7,7 +7,9 @@ void setup() {
   size(400, 600);
   if (numpad=true) {
     numpadSetup();
+    imageSetup();
   }
+  timeSetup();
   //fullscreen(); //displayWidth, displayHeight
   //OPTION: Use display width and height instead.
   appWidth = width;
@@ -30,6 +32,7 @@ void draw() {
   //
   if (numpad=true) {
     numpadDraw();
+  timeDraw();
   }
 } //End Draw
 //

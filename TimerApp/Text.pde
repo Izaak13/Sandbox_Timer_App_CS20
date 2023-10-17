@@ -6,7 +6,7 @@ void textSetup() {
   String[] fontList = PFont.list(); //To list all fonts available on system
   printArray(fontList); //For listing all possible fonts to choos, then createFont
   //
-  font = createFont ("Georgia", 169); //Verify font exists
+  font = createFont ("Impact", 193); //Verify font exists
   //Tools create Font / find font / DO NOT PRESS "OK", known bug
   //
 }//End text setup
@@ -15,7 +15,7 @@ void textSetup() {
   fill( ink ); //Ink, hexadecimal
   textAlign ( alignX, alignY ); //Align X&Y
   float size = textCalculator( rectWidth, text );
-  println(size);
+  //println(size);
   textFont(font, size); //Change the number until it fits, largest font size
   text( text, rectX, rectY, rectWidth, rectHeight );
   fill ( white ); //Default
@@ -30,7 +30,7 @@ float textCalculator( float rectWidth, String text ) {
   textSize(size);
   //println("2. ", textWidth (text), rectWidth, size);
   }//End while
-  size *= 0.85;
+  size *= 0.6;
   textSize (size);
   size = textWidth (text);
   textSize (size);
