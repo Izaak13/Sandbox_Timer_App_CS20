@@ -6,7 +6,6 @@
 //CAUTION, decimals don't work in integers, not floats or doubles
 //
 void numpadSetup() {
-      size (400, 600);
   display();
   population();
   textSetup();
@@ -32,6 +31,8 @@ void numpadSetup() {
     textDraw(navy, CENTER, CENTER, font, dzero, x[0], y[3], widthSquare, heightSquare);
     textDraw(navy, CENTER, CENTER, font, zero, x[1], y[3], widthSquare, heightSquare);
     textDraw(navy, CENTER, CENTER, font, enter, x[2], y[3], widthSquare, heightSquare);
+    //
+    textDraw(navy, CENTER, CENTER, font, enter, appWidth*1/5, appHeight*1/7, widthSquare, heightSquare);
   } //End draw
   //
   //void mousePressed() {
