@@ -1,5 +1,5 @@
 PFont font;
-color navy=#1702A7 , white=#FFFFFF;//not night mode friendly
+color navy=#4852FF, white=#FFFFFF;//not night mode friendly
 //
 void textSetup() {
   //Fonts from OS

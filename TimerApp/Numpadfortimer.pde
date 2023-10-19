@@ -32,7 +32,8 @@ void numpadSetup() {
     textDraw(navy, CENTER, CENTER, font, zero, x[1], y[3], widthSquare, heightSquare);
     textDraw(navy, CENTER, CENTER, font, enter, x[2], y[3], widthSquare, heightSquare);
     //
-    textDraw(navy, CENTER, CENTER, font, enter, appWidth*1/5, appHeight*1/7, widthSquare, heightSquare);
+    textDraw(navy, CENTER, CENTER, font, String.valueOf(enteredTime), appWidth*1.95/5, appHeight*1/7, widthSquare, heightSquare);
+    
   } //End draw
   //
   //void mousePressed() {
