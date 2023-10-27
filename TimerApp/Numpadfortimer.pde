@@ -17,7 +17,7 @@ void numpadSetup() {
     stroke(#FF8F05);
     numPadRects();
     String one="1", two="2", three="3", four="4", five="5", six="6", seven="7", eight="8", nine="9", zero="0";
-    String dzero="00", enter="ENTER";
+    String dzero="DEL", enter="00";
     fill(#D82323);
     textDraw(navy, CENTER, CENTER, font, one, x[0], y[0], widthSquare, heightSquare);
     textDraw(navy, CENTER, CENTER, font, two, x[1], y[0], widthSquare, heightSquare);
@@ -32,7 +32,7 @@ void numpadSetup() {
     textDraw(navy, CENTER, CENTER, font, zero, x[1], y[3], widthSquare, heightSquare);
     textDraw(navy, CENTER, CENTER, font, enter, x[2], y[3], widthSquare, heightSquare);
     //
-    textDraw(navy, CENTER, CENTER, font, String.valueOf(enteredTime), appWidth*1.95/5, appHeight*1/7, widthSquare, heightSquare);
+    textDraw(navy, CENTER, CENTER, font, String.valueOf(enteredTime), appWidth*1.95/5, appHeight*1/7, appWidth/4, heightSquare);
     
   } //End draw
   //

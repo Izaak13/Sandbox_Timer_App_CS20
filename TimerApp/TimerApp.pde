@@ -1,12 +1,12 @@
 //Global Variables
 int appWidth, appHeight;
-int digit = 1;
+int digit = 0;
 Boolean windowActivated = false;
-Boolean numpad = false;
+Boolean numpad = true;
 //
 void setup() {
   size(400, 700);
-  if (numpad=true) {
+  if (numpad==true) {
     numpadSetup();
   }
   timeSetup();
@@ -33,7 +33,7 @@ void draw() {
   //
   timeDraw();
   imageDraw();
-  if (numpad=true) {
+  if (numpad==true) {
     numpadDraw();
   }
 } //End Draw
@@ -49,16 +49,37 @@ void mousePressed() {
           println(j*3+i+1);
           enteredTime=enteredTime*10;
           enteredTime+=j*3+i+1;
+          digit++;
           }
       }// End for
     }//End for 
-    if ( mouseX>x[0] && mouseX<x[0]+widthSquare && mouseY>y[3] && mouseY<y[3]+widthSquare) println("00");
+    if ( mouseX>x[0] && mouseX<x[0]+widthSquare && mouseY>y[3] && mouseY<y[3]+widthSquare)
+    {
+      enteredTime=0;
+      digit=0;
+      println("DEL");
+    }
     if ( mouseX>x[1] && mouseX<x[1]+widthSquare && mouseY>y[3] && mouseY<y[3]+widthSquare)
     {
       enteredTime=enteredTime*10;
       println("0");
     }
-    if ( mouseX>x[2] && mouseX<x[2]+widthSquare && mouseY>y[3] && mouseY<y[3]+widthSquare) println("ENTER");
+    if ( mouseX>x[2] && mouseX<x[2]+widthSquare && mouseY>y[3] && mouseY<y[3]+widthSquare)
+    {
+      enteredTime=enteredTime*100;
+      println("00");
+    }
+    if ( mouseX>appWidth*1/2-playButtonWidth*1/2 && mouseX<appWidth*1/2-playButtonWidth*1/2+playButtonWidth && mouseY>appHeight*10/12 && mouseY<appHeight*10/12+playButtonHeight)
+    {
+      
+      if (numpad==false) numpad=true;
+      if (numpad==true)
+      {
+      time=true;
+      numpad=false;
+      }
+      println("timer started");
+    }
     //
 } //End mousePressed
 //

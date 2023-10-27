@@ -1,4 +1,5 @@
 int counter, enteredTime;
+boolean time=false;
 //
 void timeSetup() {
   enteredTime = 0; //variable should be from void draw, entered in by the numpad.
@@ -6,6 +7,8 @@ void timeSetup() {
 }//end setup
 //
 void timeDraw() {
-  //counter++;
-  //if ( counter%60 == 0 ) println(enteredTime--);
+  if (time==true) {
+  counter++;
+  if ( counter%60 == 0 ) println(enteredTime--);
+  }
 }
