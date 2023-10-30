@@ -72,7 +72,10 @@ void mousePressed() {
     if ( mouseX>appWidth*1/2-playButtonWidth*1/2 && mouseX<appWidth*1/2-playButtonWidth*1/2+playButtonWidth && mouseY>appHeight*10/12 && mouseY<appHeight*10/12+playButtonHeight)
     {
       
-      if (numpad==false) numpad=true;
+      if (numpad==false) 
+      {
+        numpad=true;
+      }
       if (numpad==true)
       {
       time=true;
