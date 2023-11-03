@@ -32,7 +32,7 @@ void numpadSetup() {
     textDraw(navy, CENTER, CENTER, font, zero, x[1], y[3], widthSquare, heightSquare);
     textDraw(navy, CENTER, CENTER, font, enter, x[2], y[3], widthSquare, heightSquare);
     //
-    textDraw(navy, CENTER, CENTER, font, String.valueOf(enteredTime), appWidth*1.95/5, appHeight*1/7, appWidth/4, heightSquare);
+    textDraw(white, CENTER, CENTER, font, String.valueOf(enteredTime), appWidth*1.9/5, appHeight*1/7, appWidth/4, heightSquare);
     
   } //End draw
   //

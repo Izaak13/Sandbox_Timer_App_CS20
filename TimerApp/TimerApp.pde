@@ -32,9 +32,14 @@ void draw() {
   //if ( windowActivated == true ) splashScreen();
   //
   timeDraw();
+  homeDraw();
   imageDraw();
   if (numpad==true) {
     numpadDraw();
+  }
+  else
+  {
+    textDraw(white, CENTER, CENTER, font, String.valueOf(enteredTime), appWidth*1.9/5, appHeight*3.05/7, appWidth/4, heightSquare);
   }
 } //End Draw
 //
@@ -42,6 +47,8 @@ void mousePressed() {
   //first mouse click, activate window
   windowActivated = true;
   //numpad mousepressed
+  if (numpad==true)
+  {
   for(int i=0; i<numPadColumns; i++) {
       for(int j=0; j<numPadRows-2; j++) {
           if (mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[j] && mouseY<y[j]+widthSquare) 
@@ -69,14 +76,15 @@ void mousePressed() {
       enteredTime=enteredTime*100;
       println("00");
     }
+  }
     if ( mouseX>appWidth*1/2-playButtonWidth*1/2 && mouseX<appWidth*1/2-playButtonWidth*1/2+playButtonWidth && mouseY>appHeight*10/12 && mouseY<appHeight*10/12+playButtonHeight)
     {
-      
       if (numpad==false) 
       {
+        time=false;
         numpad=true;
       }
-      if (numpad==true)
+      else
       {
       time=true;
       numpad=false;
