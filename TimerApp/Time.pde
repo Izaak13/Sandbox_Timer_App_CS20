@@ -1,4 +1,5 @@
-int counter, enteredTime;
+int counter, enteredTime, displayTime, lastTime, seconds, minutes, hours;
+String colon=":";
 boolean time=false;
 //
 void timeSetup() {

@@ -36,3 +36,13 @@ float textCalculator( float rectWidth, String text ) {
   textSize (size);
   return size;
 } //End Text Calculator
+
+  void textDrawNew( color ink, int alignX, int alignY, PFont font, String text, float rectX, float rectY, float rectWidth, float rectHeight) {
+  fill( ink ); //Ink, hexadecimal
+  textAlign ( alignX, alignY ); //Align X&Y
+  float size = appWidth*1/8;
+  //println(size);
+  textFont(font, size); //Change the number until it fits, largest font size
+  text( text, rectX, rectY, rectWidth, rectHeight );
+  fill ( white ); //Default
+  } //End textDraw

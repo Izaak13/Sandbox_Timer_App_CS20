@@ -1,6 +1,6 @@
 //Global Variables
 int appWidth, appHeight;
-int digit = 0;
+int digit = 1;
 Boolean windowActivated = false;
 Boolean numpad = true;
 //
@@ -39,7 +39,7 @@ void draw() {
   }
   else
   {
-    textDraw(white, CENTER, CENTER, font, String.valueOf(enteredTime), appWidth*1.9/5, appHeight*3.05/7, appWidth/4, heightSquare);
+    textDrawNew(white, CENTER, CENTER, font, String.valueOf(seconds), appWidth*0, appHeight*2.9/7, appWidth, appHeight*1/5);
   }
 } //End Draw
 //
@@ -55,6 +55,7 @@ void mousePressed() {
           {
           println(j*3+i+1);
           enteredTime=enteredTime*10;
+          displayTime=j*3+i+1;
           enteredTime+=j*3+i+1;
           digit++;
           }
@@ -63,7 +64,10 @@ void mousePressed() {
     if ( mouseX>x[0] && mouseX<x[0]+widthSquare && mouseY>y[3] && mouseY<y[3]+widthSquare)
     {
       enteredTime=0;
-      digit=0;
+      seconds=0;
+      minutes=0;
+      hours=0;
+      digit=1;
       println("DEL");
     }
     if ( mouseX>x[1] && mouseX<x[1]+widthSquare && mouseY>y[3] && mouseY<y[3]+widthSquare)
@@ -92,6 +96,27 @@ void mousePressed() {
       println("timer started");
     }
     //
+    if (digit==2)
+    {
+      seconds+=displayTime;
+    }
+    if (digit==3)
+    {
+      lastTime=seconds;
+      seconds*=10;
+      seconds+=displayTime;
+    }
+    if (digit==4)
+    {
+      minutes+=lastTime;
+      seconds-=lastTime*10;
+      seconds*=10;
+      seconds+=displayTime;
+    }
+    if (digit==5)
+    {
+    }
+    
 } //End mousePressed
 //
 void keyPressed() {} //End keyPressed
