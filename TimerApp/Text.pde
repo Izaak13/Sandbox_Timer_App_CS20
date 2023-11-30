@@ -1,10 +1,11 @@
 PFont font;
 color navy=#4852FF, white=#FFFFFF;//not night mode friendly
+String minuteZero, secondZero, hourZero;
 //
 void textSetup() {
   //Fonts from OS
   String[] fontList = PFont.list(); //To list all fonts available on system
-  printArray(fontList); //For listing all possible fonts to choos, then createFont
+  //printArray(fontList); //For listing all possible fonts to choos, then createFont
   //
   font = createFont ("Impact", 193); //Verify font exists
   //Tools create Font / find font / DO NOT PRESS "OK", known bug

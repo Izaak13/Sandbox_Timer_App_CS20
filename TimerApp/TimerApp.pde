@@ -1,6 +1,6 @@
 //Global Variables
 int appWidth, appHeight;
-int digit = 1;
+int digit = 0;
 Boolean windowActivated = false;
 Boolean numpad = true;
 //
@@ -31,7 +31,36 @@ void setup() {
 void draw() {
   //if ( windowActivated == true ) splashScreen();
   //
-  timeDraw();
+  if (hours < 10)
+  {
+    hourZero = "0";
+  }
+  else
+  {
+    hourZero = "";
+  }
+  //
+  if (minutes < 10)
+  {
+    minuteZero = "0";
+  }
+  else
+  {
+    minuteZero = "";
+  }
+  //
+  if (seconds < 10)
+  {
+    secondZero = "0";
+  }
+  else
+  {
+    secondZero = "";
+  }
+  //hours = enteredTime/3600;
+  //minutes = (enteredTime-hours*3600)/60;
+  //seconds = enteredTime - hours*3600 - minutes*60;
+    //
   homeDraw();
   imageDraw();
   if (numpad==true) {
@@ -39,7 +68,8 @@ void draw() {
   }
   else
   {
-    textDrawNew(white, CENTER, CENTER, font, String.valueOf(seconds), appWidth*0, appHeight*2.9/7, appWidth, appHeight*1/5);
+    timeDraw();
+    textDrawNew(white, CENTER, CENTER, font, hourZero+String.valueOf(hours)+colon+minuteZero+String.valueOf(minutes)+colon+secondZero+String.valueOf(seconds), appWidth*0, appHeight*2.83/7, appWidth, appHeight*1/5);
   }
 } //End Draw
 //
@@ -54,30 +84,31 @@ void mousePressed() {
           if (mouseX>x[i] && mouseX<x[i]+widthSquare && mouseY>y[j] && mouseY<y[j]+widthSquare) 
           {
           println(j*3+i+1);
-          enteredTime=enteredTime*10;
           displayTime=j*3+i+1;
-          enteredTime+=j*3+i+1;
           digit++;
           }
       }// End for
     }//End for 
     if ( mouseX>x[0] && mouseX<x[0]+widthSquare && mouseY>y[3] && mouseY<y[3]+widthSquare)
     {
-      enteredTime=0;
+      displayTime=0;
       seconds=0;
       minutes=0;
       hours=0;
-      digit=1;
+      digit=0;
       println("DEL");
     }
     if ( mouseX>x[1] && mouseX<x[1]+widthSquare && mouseY>y[3] && mouseY<y[3]+widthSquare)
     {
-      enteredTime=enteredTime*10;
+      if (digit>0)
+      {
+      displayTime=0;
+      digit++;
       println("0");
+      }
     }
     if ( mouseX>x[2] && mouseX<x[2]+widthSquare && mouseY>y[3] && mouseY<y[3]+widthSquare)
     {
-      enteredTime=enteredTime*100;
       println("00");
     }
   }
@@ -96,28 +127,63 @@ void mousePressed() {
       println("timer started");
     }
     //
+    if (numpad==true)
+    {
+    if (digit==1)
+    {
+    seconds = displayTime;
+    }
     if (digit==2)
     {
-      seconds+=displayTime;
+    seconds*=10;
+    seconds+=displayTime;
     }
     if (digit==3)
     {
-      lastTime=seconds;
-      seconds*=10;
-      seconds+=displayTime;
+    minutes=seconds/10;
+    seconds-=seconds/10*10;
+    seconds*=10;
+    seconds+=displayTime;
     }
     if (digit==4)
     {
-      minutes+=lastTime;
-      seconds-=lastTime*10;
+      minutes=minutes*10;
+      minutes+=seconds/10;
+      seconds-=seconds/10*10;
       seconds*=10;
       seconds+=displayTime;
     }
     if (digit==5)
     {
+      hours=minutes/10;
+      minutes-=minutes/10*10;
+      minutes*=10;
+      minutes+=seconds/10;
+      seconds-=seconds/10*10;
+      seconds*=10;
+      seconds+=displayTime;
     }
-    
-} //End mousePressed
+    if (digit==6)
+    {
+      hours*=10;
+      hours+=minutes/10;
+      minutes-=minutes/10*10;
+      minutes*=10;
+      minutes+=seconds/10;
+      seconds-=seconds/10*10;
+      seconds*=10;
+      seconds+=displayTime;
+    }
+    //
+    println("hours: "+hours);
+    println("minutes: "+minutes);
+    println("seconds: "+seconds);
+    println("time: "+displayTime);
+    println("digit: "+digit);
+    println("-");
+    //
+    }
+  } //End mousePressed
 //
 void keyPressed() {} //End keyPressed
 //

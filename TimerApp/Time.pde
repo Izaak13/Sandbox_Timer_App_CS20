@@ -9,7 +9,20 @@ void timeSetup() {
 //
 void timeDraw() {
   if (time==true) {
+    if (seconds > 0 || minutes>0 || hours>0 )
+    {
   counter++;
-  if ( counter%60 == 0 ) println(enteredTime--);
+  if ( counter%60 == 0 ) println(seconds--);
+  }
+  }
+  if (seconds<0 && minutes > 0)
+  {
+    seconds+=60;
+    minutes--;
+  }
+  if (minutes<0 && hours > 0)
+  {
+    minutes+=60;
+    hours--;
   }
 }
