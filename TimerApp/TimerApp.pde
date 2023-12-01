@@ -69,7 +69,7 @@ void draw() {
   else
   {
     timeDraw();
-    textDrawNew(white, CENTER, CENTER, font, hourZero+String.valueOf(hours)+colon+minuteZero+String.valueOf(minutes)+colon+secondZero+String.valueOf(seconds), appWidth*0, appHeight*2.83/7, appWidth, appHeight*1/5);
+    textDrawNew(white, CENTER, CENTER, font, String.valueOf(hours)+colon+minuteZero+String.valueOf(minutes)+colon+secondZero+String.valueOf(seconds), appWidth*0, appHeight*2.83/7, appWidth, appHeight*1/5);
   }
 } //End Draw
 //
@@ -118,6 +118,11 @@ void mousePressed() {
       {
         time=false;
         numpad=true;
+        displayTime=0;
+      seconds=0;
+      minutes=0;
+      hours=0;
+      digit=0;
       }
       else
       {

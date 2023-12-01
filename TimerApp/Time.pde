@@ -12,13 +12,19 @@ void timeDraw() {
     if (seconds > 0 || minutes>0 || hours>0 )
     {
   counter++;
-  if ( counter%60 == 0 ) println(seconds--);
+  if ( counter%48 == 0 ) println(seconds--);
   }
   }
   if (seconds<0 && minutes > 0)
   {
     seconds+=60;
     minutes--;
+  }
+  if (seconds<0 && hours > 0)
+  {
+    seconds+=60;
+    hours--;
+    minutes+=59;
   }
   if (minutes<0 && hours > 0)
   {
