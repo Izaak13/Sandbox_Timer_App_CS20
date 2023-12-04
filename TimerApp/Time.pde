@@ -1,5 +1,6 @@
 int counter, enteredTime, displayTime, lastTime, seconds, minutes, hours;
 String colon=":";
+String timesUp = "TIME'S UP!";
 boolean time=false;
 //
 void timeSetup() {
@@ -13,6 +14,10 @@ void timeDraw() {
     {
   counter++;
   if ( counter%48 == 0 ) println(seconds--);
+  }
+  else
+  {
+    textDrawNew(red, CENTER, CENTER, font, timesUp, appWidth*0, appHeight*1/2, appWidth, appHeight*1/5);
   }
   }
   if (seconds<0 && minutes > 0)

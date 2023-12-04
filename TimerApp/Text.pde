@@ -1,5 +1,5 @@
 PFont font;
-color navy=#4852FF, white=#FFFFFF;//not night mode friendly
+color navy=#4852FF, white=#FFFFFF, red=#FF1C1C;//not night mode friendly
 String minuteZero, secondZero, hourZero;
 //
 void textSetup() {
