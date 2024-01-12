@@ -107,10 +107,6 @@ void mousePressed() {
       println("0");
       }
     }
-    if ( mouseX>x[2] && mouseX<x[2]+widthSquare && mouseY>y[3] && mouseY<y[3]+widthSquare)
-    {
-      println("00");
-    }
   }
     if ( mouseX>appWidth*1/2-playButtonWidth*1/2 && mouseX<appWidth*1/2-playButtonWidth*1/2+playButtonWidth && mouseY>appHeight*10/12 && mouseY<appHeight*10/12+playButtonHeight)
     {
@@ -132,6 +128,8 @@ void mousePressed() {
       println("timer started");
     }
     //
+    if ( (mouseX>x[0] && mouseX<x[2]+widthSquare && mouseY>y[0] && mouseY<y[2]+heightSquare) || (mouseX>x[0] && mouseX<x[1]+widthSquare && mouseY>y[0] && mouseY<y[3]+heightSquare)) 
+    {
     if (numpad==true)
     {
     if (digit==1)
@@ -187,6 +185,7 @@ void mousePressed() {
     println("digit: "+digit);
     println("-");
     //
+    }
     }
   } //End mousePressed
 //
